@@ -1,0 +1,335 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(0, 0%, 96%);
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  min-height: 100vh;
+  padding: 3rem;
+}
+
+main {
+  max-width: 1440px;
+  width: 85vw;
+}
+
+img {
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 4.5rem;
+  gap: 1.5rem;
+  grid-template-areas:
+    "seventh first first fourth"
+    "seventh first first fourth"
+    "seventh first first fourth"
+    "seventh second third fourth"
+    "eighth second third fourth"
+    "eighth second third fourth"
+    "eighth sixth fifth fifth"
+    "eighth sixth fifth fifth";
+}
+
+.rating,
+.multiple-account,
+.consistent,
+.schedule,
+.grow-followers,
+.audience-growth,
+.create-post,
+.ai-content {
+  border-radius: 0.5rem;
+}
+
+.rating {
+  background-color: hsl(256, 67%, 59%);
+  color: hsl(0, 0%, 100%);
+  grid-area: first;
+  padding: 3.7rem 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    font-weight: 500;
+    font-size: 3.5rem;
+    line-height: 0.9;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+
+    span {
+      color: hsl(39, 100%, 71%);
+    }
+  }
+
+  img {
+    width: 40%;
+  }
+
+  p {
+    color: hsl(31, 66%, 93%);
+    margin-top: 0.4rem;
+  }
+}
+
+.multiple-account {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: second;
+  padding: 1rem;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 1rem;
+    text-align: left;
+  }
+}
+
+.consistent {
+  background-color: hsl(39, 100%, 71%);
+  grid-area: third;
+  overflow: hidden;
+  padding: 1rem 1rem 0 1rem;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -0.0625rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+}
+
+.schedule {
+  background-color: hsl(254, 88%, 90%);
+  grid-area: fourth;
+  overflow: hidden;
+  padding: 1.5rem;
+
+  h2 {
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    width: 175%;
+  }
+
+  p {
+    color: hsl(0, 0%, 7%);
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-top: 1rem;
+  }
+}
+
+.grow-followers {
+  background-color: hsl(256, 67%, 59%);
+  color: hsl(0, 0%, 100%);
+  grid-area: fifth;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  text-align: left;
+
+  img {
+    width: 30%;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 0.9;
+  }
+}
+
+.audience-growth {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: sixth;
+  padding: 1rem;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 500;
+
+    span {
+      display: block;
+      font-size: 3rem;
+    }
+  }
+
+  img {
+    margin-top: 1rem;
+    width: 50%;
+  }
+}
+
+.create-post {
+  background-color: hsl(31, 66%, 93%);
+  grid-area: seventh;
+  padding: 3.5rem 2rem;
+
+  h2 {
+    font-size: 2.1rem;
+    font-weight: 500;
+    letter-spacing: -0.0625rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+
+    span {
+      color: hsl(256, 67%, 59%);
+      font-style: italic;
+    }
+  }
+}
+
+.ai-content {
+  background-color: hsl(39, 100%, 71%);
+  grid-area: eighth;
+  padding: 1rem;
+
+  h2 {
+    font-size: 2.7rem;
+    font-weight: 500;
+    letter-spacing: -0.0625rem;
+    line-height: 0.8;
+    margin-bottom: 2.5rem;
+  }
+
+  img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 60rem) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95vw;
+    height: 100%;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    max-width: 22rem;
+  }
+
+  .rating {
+    padding: 2rem;
+    h2 {
+      font-size: 2.7rem;
+    }
+  }
+
+  .multiple-account {
+    h2 {
+      font-size: 1.5rem;
+      text-align: initial;
+    }
+  }
+
+  .consistent {
+    overflow: hidden;
+
+    h2 {
+      font-size: 1.7rem;
+    }
+
+    img {
+      width: 65%;
+      margin-bottom: -1.6rem;
+    }
+  }
+
+  .schedule {
+    text-align: center;
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .grow-followers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+
+    img {
+      width: 70%;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      width: 60%;
+    }
+  }
+
+  .create-post {
+    padding: 1rem;
+
+    h2 {
+      line-height: 0.8;
+    }
+
+    img {
+      width: 60%;
+    }
+  }
+
+  .ai-content {
+    h2 {
+      font-size: 2rem;
+      line-height: 0.9;
+      margin-bottom: 1rem;
+    }
+
+    img {
+      width: 65%;
+    }
+  }
+}
